@@ -3,16 +3,16 @@ const mongoose = require('mongoose');
 const jobSchema =new mongoose.Schema({
     name:{
         type:String,
-        required:true
+        require:true
     },
     vacancy:{
-        Number
+        type:Number
     },
     startDate:{
-        Date
+        type:Date
     },
     endDate:{
-        Date
+        type:Date
     }        
 });
 
