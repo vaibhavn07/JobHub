@@ -1,5 +1,5 @@
 const express = require('express')
-// const Job = require("../schemas/jobSchema");
+const Job = require("../schemas/jobSchema");
 const router = express.Router();
 
 router.post("/job",(req,res)=>{
@@ -8,7 +8,8 @@ router.post("/job",(req,res)=>{
 
 
 router.get("/listing",(req,res)=>{
-    const job = {name:"Microsoft",vacancy:10};
+    const jobs = Job.findAll();
+
     res.send(job).status(400);
 })
 
